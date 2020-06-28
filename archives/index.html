@@ -1,3 +1,8 @@
+<!--左侧图片改造 -->
+
+<!--左侧图片改造 -->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,18 +10,18 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 小怪&#39;s blog</title>
+  <link rel="dns-prefetch" href="https://xiaoguaiii.github.io">
+  <title>Archives | xiaoguaiii&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="小怪&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
-<meta property="og:site_name" content="小怪&#39;s blog">
+<meta property="og:title" content="xiaoguaiii&#39;s blog">
+<meta property="og:url" content="https://xiaoguaiii.github.io/archives/index.html">
+<meta property="og:site_name" content="xiaoguaiii&#39;s blog">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="小怪">
+<meta property="article:author" content="xiaoguaiii">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="小怪&#39;s blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="xiaoguaiii&#39;s blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -32,24 +37,80 @@
 
   
 
+
+  <!--看板娘-->
+  <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+    L2Dwidget.init({
+		  model: {
+			jsonPath: '/./packages/live2d-widget-model-wanko/assets/wanko.model.json',			
+			scale: 1,
+			hHeadPos: 0.5,
+			vHeadPos: 0.618,
+			myDefine: []
+		  },
+		  display: {
+			superSample: 2,
+			width: 100,
+			height: 200,
+			position: 'right',
+			hOffset: 0,
+			vOffset: -20
+		  },
+		  mobile: {
+			show: true,
+			scale: 0.5,
+			motion: true
+		  },
+		  name: {
+			canvas: 'live2dcanvas',
+			div: 'live2d-widget'
+		  },
+		  react: {
+			opacityDefault: 0.7,
+			opacityOnHover: 0.2
+			
+		  },
+		  dev: {
+			log: false,
+			border: false,
+			mouseLog: false
+			
+		  }
+		});
+</script>
+ <!--看板娘-->
+
+
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
+  
+  <!--看板娘 -->
+  <div id="live2d-widget">
+		<canvas id="live2dcanvas" width="300" height="600" style="position: fixed; opacity: 0.7; 
+			right: 0px; bottom: -20px; z-index: 99999; pointer-events: none; border: 1px dashed rgb(204, 204, 204);">
+		</canvas>
+  </div>
+<!--看板娘 -->
+
+
+
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow" style="background: url(/assert/image/psc.jpg)no-repeat 100%;background-size:cover;">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			<img src="/assert/image/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">小怪</a></h1>
+		  <h1 class="header-author"><a href="/">xiaoguaiii</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">我很抱歉</p>
+		<p class="header-subtitle">都是鱼肉，只是砧板不同罢了</p>
 		
 
 		<nav class="header-menu">
@@ -79,11 +140,7 @@
 				
 					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
 		        
 			</div>
 		</nav>
@@ -94,7 +151,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -104,10 +161,10 @@
 				<img src="/assert/image/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">小怪</h1>
+			  <h1 class="header-author js-header-author">xiaoguaiii</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>我很抱歉<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>都是鱼肉，只是砧板不同罢了<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -120,11 +177,7 @@
 					
 						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
 			        
 				</div>
 			</nav>
@@ -200,7 +253,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 小怪
+    		&copy; 2020 xiaoguaiii
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
